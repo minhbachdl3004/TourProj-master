@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="tourDetails" prefHeight="597.0" prefWidth="711.0" style="-fx-background-color: #8D0BD3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tour_project.controllers.TourListsController">
+    <children>
+        <TableView id="tableListTours" fx:id="tableListTours" layoutX="138.0" layoutY="135.0" prefHeight="270.0" prefWidth="468.0" style="-fx-background-color: #0BD3CD;">
+            <columns>
+                <TableColumn id="matour" fx:id="matour" prefWidth="114.0" text="Mã tour" />
+                <TableColumn id="tengoi" fx:id="tengoi" prefWidth="235.0" text="Tên gọi" />
+                <TableColumn id="maloaihinh" fx:id="maloaihinh" minWidth="0.0" prefWidth="105.0" text="Mã loại hình" visible="false" />
+                <TableColumn id="dacdiem" fx:id="dacdiem" minWidth="0.0" prefWidth="118.0" text="Đặc điểm" />
+            </columns>
+        </TableView>
+        <Button fx:id="tourDetails" layoutX="634.0" layoutY="247.0" mnemonicParsing="false" onAction="#gotoDetails" prefHeight="61.0" prefWidth="67.0" style="-fx-background-color: #AFD30B;" text="Details" />
+    </children>
+</AnchorPane>

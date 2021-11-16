@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/tour_proj
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            master
+        </property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">6</property>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Show all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- List mapping annotation classes -->
+        <mapping class="com.example.tour_project.models.Tour" />
+        <mapping class="com.example.tour_project.models.TypeTour" />
+        <mapping class="com.example.tour_project.models.TourPrice" />
+        <mapping class="com.example.tour_project.models.PlaceOrder" />
+        <mapping class="com.example.tour_project.models.Place" />
+        <mapping class="com.example.tour_project.models.TouristGroup" />
+        <mapping class="com.example.tour_project.models.CustomerTour" />
+        <mapping class="com.example.tour_project.models.Customer" />
+        <mapping class="com.example.tour_project.models.DetailTourGroup" />
+        <mapping class="com.example.tour_project.models.Cost" />
+        <mapping class="com.example.tour_project.models.Staff" />
+        <mapping class="com.example.tour_project.models.StaffAllocation" />
+        <mapping class="com.example.tour_project.models.TypeCost" />
+
+    </session-factory>
+</hibernate-configuration>
